@@ -24,4 +24,4 @@ jobs:
       - name: Run my Python file
         run: |
           echo "Message reçu : ${{ github.event.inputs.message }}"
-          python mon_fichier.py "${{ github.event.inputs.message }}"
+          python .github/workflows/mon_fichier.py "${{ github.event.inputs.message }}"
