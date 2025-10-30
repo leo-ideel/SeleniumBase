@@ -9,4 +9,4 @@ if len(sys.argv) < 2:
 message = sys.argv[1]
 
 # Ici tu peux faire ce que tu veux avec le message
-print(f"Beaugosse, tu as envoyé : {message}")
+print(f"Beaugosse vive le aaah, tu as envoyé : {message}")
