@@ -1,4 +1,4 @@
-name: Test Python file
+name: Mon test scraper
 
 on:
   workflow_dispatch:
