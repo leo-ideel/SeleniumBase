@@ -45,8 +45,7 @@ jobs:
     - name: Install chromedriver
       run: |
         seleniumbase install chromedriver
-    - name: Make sure pytest is working
-
+  
     - name: Install Xvfb
       run: |
         sudo apt-get update
