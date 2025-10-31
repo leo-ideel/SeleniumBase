@@ -35,15 +35,17 @@ class MyTestClass(BaseCase):
         time.sleep(5)
         print("je crois que cest reussi")
         self.cdp.save_screenshot("full.png")
-        return
         
-        # time.sleep(5)
-        # grid = edit_img.generate_grid(is_headed)
-        # print(grid)
+        time.sleep(5)
+        grid = edit_img.generate_grid(is_headed)
+        print(grid)
+
+        self.cdp.save_screenshot("jeanne.png")
         
 
         # self.cdp.type("#input_login", user)
         # self.input_code(mdp, grid)
+        return
         # self.cdp.click("#formulaire_valider")
 
         # time.sleep(5)
