@@ -5,8 +5,8 @@ import pytesseract
 rows, cols = 3, 8
 case_width = 30
 case_height = 30
-start_x = 410
-start_y = 280
+start_x = 280
+start_y = 380
 
 
 # --- Fonctions utilitaires ---
@@ -54,10 +54,10 @@ def get_croped_screenshot(is_headed):
     # plus faut ajouter une variable headless ou pas
     
     if is_headed:
-        left = 375
-        top = 265
-        right = 460
-        bottom = 500
+        left = 390
+        top = 270
+        right = 475
+        bottom = 505
     else:
         left = 375
         top = 355
