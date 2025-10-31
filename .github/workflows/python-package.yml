@@ -58,7 +58,7 @@ jobs:
         python .github/workflows/scraper_axa.py --browser=chrome --headed
     
     - name: Upload screenshot
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: screenshot
         path: full.png
