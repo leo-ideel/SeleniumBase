@@ -53,6 +53,13 @@ jobs:
       run: |
         echo "def test_2(): pass" > nothing2.py
         nosetests nothing2.py
+    - name: Install Xvfb
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y xvfb
+        Xvfb :99 -screen 0 1920x1080x24 &
+        echo "DISPLAY=:99" >> $GITHUB_ENV
+
     - name: Run python scraper_axa.py
       run: |
         python .github/workflows/scraper_axa.py --browser=chrome --headed
