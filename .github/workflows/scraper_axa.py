@@ -30,7 +30,6 @@ class MyTestClass(BaseCase):
         
 
         self.activate_cdp_mode(url)
-        self.cdp.set_window_rect(0, 0, 1440, 900)
 
         time.sleep(5)
         print("je crois que cest reussi")
