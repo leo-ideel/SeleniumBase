@@ -45,4 +45,4 @@ jobs:
       - name: Run my Python file
         run: |
           echo "Message reçu : ${{ github.event.inputs.message }}"
-          python .github/workflows/axa_scraper.py --headed
+          python .github/workflows/scraper_axa.py --headed
