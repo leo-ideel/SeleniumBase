@@ -49,37 +49,39 @@ class MyTestClass(BaseCase):
         self.cdp.click("#formulaire_valider")
 
         time.sleep(5)
-        self.cdp.save_screenshot("jeanne.png")
-        return
-        # try:
-        #     self.cdp.click("#MainHomeEdito > div > div.mainHomeEdito-right > div.tools-container > div > div.tools-content > div:nth-child(1) > a > strong")
-        # except:
-        #     self.cdp.solve_captcha()
+        time.sleep(10)
+        try:
+            self.cdp.click("#MainHomeEdito > div > div.mainHomeEdito-right > div.tools-container > div > div.tools-content > div:nth-child(1) > a > strong")
+        except:
+            self.cdp.solve_captcha()
             
-        # time.sleep(3)
-        # selector = "#ptfliste > tbody > tr.even > td > a"
-        # self.cdp.switch_to_newest_tab()
+        time.sleep(10)
+        selector = "#ptfliste > tbody > tr.even > td > a"
+        self.cdp.switch_to_newest_tab()
         # tabs = self.cdp.get_tabs()
         # self.cdp.switch_to_tab(tabs[1])
 
         
         # self.save_screenshot("elle-est-ou-jeanne.png")
         
-        # time.sleep(5)
-        # frames = self.cdp.execute_script("return Array.from(window.frames).map(f => f.name)")
-        # print(frames)
+        time.sleep(5)
+        frames = self.cdp.execute_script("return Array.from(window.frames).map(f => f.name)")
+        print(frames)
 
-        # self.switch_to_frame("main")
-        # time.sleep(10)
-        # input("avant le click")
-        # self.cdp.click(selector)
-
+        self.switch_to_frame("main")
+        time.sleep(10)
         
-        # input("wait")
+        # input("avant le click")
+        self.cdp.click(selector)
+        time.sleep(10)
+
+        self.cdp.click("#j1 > table:nth-child(5) > tbody > tr:nth-child(1) > td:nth-child(1) > h1 > a")
+        self.cdp.save_screenshot("jeanne.png")
+        return
+        
 
 
         # time.sleep(2)
-        # self.cdp.click("#j1 > table:nth-child(5) > tbody > tr:nth-child(1) > td:nth-child(1) > h1 > a")
         # input("here")
         # frames = self.cdp.execute_script("return Array.from(window.frames).map(f => f.name)")
         # print(frames)
