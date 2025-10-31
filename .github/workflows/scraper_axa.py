@@ -26,11 +26,11 @@ class MyTestClass(BaseCase):
         is_headed = True
         # A changer selon si on est en headed ou headless True pour headed
         
-        self.set_window_size(1440, 900)
+        # self.set_window_size(1440, 900)
         
 
         self.activate_cdp_mode(url)
-        
+        self.cdp.set_window_size(1440, 900)
 
         time.sleep(5)
         print("je crois que cest reussi")
