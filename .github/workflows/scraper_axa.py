@@ -30,10 +30,9 @@ class MyTestClass(BaseCase):
         
 
         self.activate_cdp_mode(url)
-        # self.cdp.set_window_rect(392, 1128, 1280, 840)
+
         self.cdp.set_window_rect(20, 54, 1280, 840)
-        rect = self.cdp.get_window_rect()
-        print("\n\n rect : \n\n", rect)
+
 
         time.sleep(5)
         print("je crois que cest reussi")
@@ -43,16 +42,15 @@ class MyTestClass(BaseCase):
         grid = edit_img.generate_grid(is_headed)
         print(grid)
 
-        self.cdp.save_screenshot("jeanne.png")
         
 
-        # self.cdp.type("#input_login", user)
-        # self.input_code(mdp, grid)
-        return
-        # self.cdp.click("#formulaire_valider")
+        self.cdp.type("#input_login", user)
+        self.input_code(mdp, grid)
+        self.cdp.click("#formulaire_valider")
 
-        # time.sleep(5)
-        # self.cdp.save_screenshot("elle-est-ou-jeanne.png")
+        time.sleep(5)
+        self.cdp.save_screenshot("jeanne.png")
+        return
         # try:
         #     self.cdp.click("#MainHomeEdito > div > div.mainHomeEdito-right > div.tools-container > div > div.tools-content > div:nth-child(1) > a > strong")
         # except:
