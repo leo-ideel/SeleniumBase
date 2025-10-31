@@ -19,8 +19,8 @@ class MyTestClass(BaseCase):
         user = "G124293"
         mdp = "09090"
         
-        # url = "https://inaxa.axa-courtage.fr/"
-        url = "https://chatgpt.com/"
+        url = "https://inaxa.axa-courtage.fr/"
+        # url = "https://chatgpt.com/"
         
         # is_headed = True
         is_headed = True
