@@ -55,7 +55,8 @@ class MyTestClass(BaseCase):
         except:
             self.cdp.solve_captcha()
             
-        time.sleep(10)
+        time.sleep(5)
+        self.cdp.save_screenshot("jeanne.png")
         selector = "#ptfliste > tbody > tr.even > td > a"
         self.cdp.switch_to_newest_tab()
         # tabs = self.cdp.get_tabs()
@@ -67,6 +68,8 @@ class MyTestClass(BaseCase):
         time.sleep(5)
         frames = self.cdp.execute_script("return Array.from(window.frames).map(f => f.name)")
         print(frames)
+        self.cdp.save_screenshot("jeanne.png")
+
 
         self.switch_to_frame("main")
         time.sleep(10)
@@ -76,7 +79,6 @@ class MyTestClass(BaseCase):
         time.sleep(10)
 
         self.cdp.click("#j1 > table:nth-child(5) > tbody > tr:nth-child(1) > td:nth-child(1) > h1 > a")
-        self.cdp.save_screenshot("jeanne.png")
         return
         
 
