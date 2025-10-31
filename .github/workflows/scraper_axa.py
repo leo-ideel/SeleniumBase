@@ -32,7 +32,8 @@ class MyTestClass(BaseCase):
         self.activate_cdp_mode(url)
         
 
-        time.sleep(5) 
+        time.sleep(5)
+        print("je crois que cest reussi")
         self.cdp.save_screenshot("full.png")
         return
         
