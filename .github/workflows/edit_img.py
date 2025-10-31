@@ -54,10 +54,10 @@ def get_croped_screenshot(is_headed):
     # plus faut ajouter une variable headless ou pas
     
     if is_headed:
-        left = 390
-        top = 270
-        right = 475
-        bottom = 505
+        left = 360
+        top = 275
+        right = 445
+        bottom = 510
     else:
         left = 375
         top = 355
