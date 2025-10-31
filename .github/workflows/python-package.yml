@@ -56,4 +56,10 @@ jobs:
     - name: Run python scraper_axa.py
       run: |
         python .github/workflows/scraper_axa.py --browser=chrome --headed
+    
+    - name: Upload screenshot
+      uses: actions/upload-artifact@v3
+      with:
+        name: screenshot
+        path: full.png
    
