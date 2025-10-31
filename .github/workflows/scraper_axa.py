@@ -30,7 +30,8 @@ class MyTestClass(BaseCase):
         
 
         self.activate_cdp_mode(url)
-        self.cdp.set_window_rect(392, 1128, 1280, 840)
+        # self.cdp.set_window_rect(392, 1128, 1280, 840)
+        self.cdp.set_window_rect(20, 54, 1280, 840)
         rect = self.cdp.get_window_rect()
         print("\n\n rect : \n\n", rect)
 
