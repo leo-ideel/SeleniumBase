@@ -19,8 +19,8 @@ class MyTestClass(BaseCase):
         user = "G124293"
         mdp = "09090"
         
-        url = "https://inaxa.axa-courtage.fr/"
-        # url = "https://chatgpt.com/"
+        # url = "https://inaxa.axa-courtage.fr/"
+        url = "https://chatgpt.com/"
         
         # is_headed = True
         is_headed = True
@@ -34,58 +34,59 @@ class MyTestClass(BaseCase):
 
         time.sleep(5) 
         self.cdp.save_screenshot("full.png")
+        return
         
-        time.sleep(5)
-        grid = edit_img.generate_grid(is_headed)
-        print(grid)
+        # time.sleep(5)
+        # grid = edit_img.generate_grid(is_headed)
+        # print(grid)
         
 
-        self.cdp.type("#input_login", user)
-        self.input_code(mdp, grid)
-        self.cdp.click("#formulaire_valider")
+        # self.cdp.type("#input_login", user)
+        # self.input_code(mdp, grid)
+        # self.cdp.click("#formulaire_valider")
 
-        time.sleep(5)
-        self.cdp.save_screenshot("elle-est-ou-jeanne.png")
-        try:
-            self.cdp.click("#MainHomeEdito > div > div.mainHomeEdito-right > div.tools-container > div > div.tools-content > div:nth-child(1) > a > strong")
-        except:
-            self.cdp.solve_captcha()
+        # time.sleep(5)
+        # self.cdp.save_screenshot("elle-est-ou-jeanne.png")
+        # try:
+        #     self.cdp.click("#MainHomeEdito > div > div.mainHomeEdito-right > div.tools-container > div > div.tools-content > div:nth-child(1) > a > strong")
+        # except:
+        #     self.cdp.solve_captcha()
             
-        time.sleep(3)
-        selector = "#ptfliste > tbody > tr.even > td > a"
-        self.cdp.switch_to_newest_tab()
+        # time.sleep(3)
+        # selector = "#ptfliste > tbody > tr.even > td > a"
+        # self.cdp.switch_to_newest_tab()
         # tabs = self.cdp.get_tabs()
         # self.cdp.switch_to_tab(tabs[1])
 
         
         # self.save_screenshot("elle-est-ou-jeanne.png")
         
-        time.sleep(5)
-        frames = self.cdp.execute_script("return Array.from(window.frames).map(f => f.name)")
-        print(frames)
+        # time.sleep(5)
+        # frames = self.cdp.execute_script("return Array.from(window.frames).map(f => f.name)")
+        # print(frames)
 
-        self.switch_to_frame("main")
-        time.sleep(10)
-        input("avant le click")
-        self.cdp.click(selector)
+        # self.switch_to_frame("main")
+        # time.sleep(10)
+        # input("avant le click")
+        # self.cdp.click(selector)
 
         
-        input("wait")
+        # input("wait")
 
 
-        time.sleep(2)
-        self.cdp.click("#j1 > table:nth-child(5) > tbody > tr:nth-child(1) > td:nth-child(1) > h1 > a")
-        input("here")
-        frames = self.cdp.execute_script("return Array.from(window.frames).map(f => f.name)")
-        print(frames)
+        # time.sleep(2)
+        # self.cdp.click("#j1 > table:nth-child(5) > tbody > tr:nth-child(1) > td:nth-child(1) > h1 > a")
+        # input("here")
+        # frames = self.cdp.execute_script("return Array.from(window.frames).map(f => f.name)")
+        # print(frames)
         
-        
-
         
 
         
-        input("fin du test")
-        self.driver.quit()
+
+        
+        # input("fin du test")
+        # self.driver.quit()
 
         # self.cdp.gui_click_x_y(100, 400, timeframe=0.25)
 
