@@ -5,8 +5,8 @@ import pytesseract
 rows, cols = 3, 8
 case_width = 30
 case_height = 30
-start_x = 380
-start_y = 380
+start_x = 410
+start_y = 280
 
 
 # --- Fonctions utilitaires ---
