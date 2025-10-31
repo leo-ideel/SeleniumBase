@@ -55,5 +55,5 @@ jobs:
         nosetests nothing2.py
     - name: Run python scraper_axa.py
       run: |
-        python workflows/scraper_axa.py --browser=chrome --headed
+        python .github/workflows/scraper_axa.py --browser=chrome --headed
    
